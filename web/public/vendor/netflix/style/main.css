@@ -1,0 +1,197 @@
+/* Declaração de variáveis */
+
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+    --cinza: #AAA;
+    --branco: #FFF;
+}
+
+
+/* Configuração global */
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+}
+
+
+/* Elementos base */
+
+body {
+    background: var(--preto);
+    /*Chamando as variáveis*/
+    color: var(--branco);
+    min-width: 375px;
+}
+
+.container {
+    margin: 0 20px;
+}
+
+
+/* Header */
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+
+.hidden {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    transition: all 0.3s ease-in-out;
+}
+
+.scroll {
+    background: var(--preto);
+    transition: all 0.3s ease-in-out;
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+header .logo {
+    color: var(--vermelho);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+}
+
+.fa-chevron-down::before {
+    display: none;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu a {
+    color: var(--branco);
+    margin-right: 15px;
+}
+
+.menu a:hover {
+    color: var(--cinza);
+}
+
+
+/* Filme principal */
+
+.filme-principal {
+    font-size: 16px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.50), rgba(0, 0, 0, 1)100%), url('../img/html.jhpg');
+
+    min-height: 60vh;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    margin-top: 25%;
+    font-size: 50px;
+}
+
+.botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    color: var(--branco);
+
+    padding: 15px 30px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+    transition: .3s ease all;
+
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+
+/* Carousel */
+
+.titulo-carousel {
+    margin-bottom: 10px;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carousel-filmes {
+    margin-top: 20px;
+}
+
+.fas {
+    width: auto;
+}
+
+.owl-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Footer */
+.links {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    color: var(--cinza);
+}
+
+.Copyright {
+    margin-right: 20px;
+}
+
+.redes-sociais {
+    width: 30px;
+    color: var(--cinza);
+    margin: 0 5px;
+}
